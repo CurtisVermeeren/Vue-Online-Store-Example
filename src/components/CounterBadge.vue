@@ -4,12 +4,10 @@
 
 <script>
 export default {
-	name: 'counter-badge',
-	props: ['count'],
-}
+  name: "counter-badge",
+  props: ["count"]
+};
 </script>
-
-
 
 <style lang="scss">
 .badge {

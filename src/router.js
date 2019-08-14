@@ -7,23 +7,23 @@ import Cart from "./views/Cart.vue";
 Vue.use(Router);
 
 export default new Router({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes: [
-        {
-            path: "/",
-            name: "home",
-            component: Home
-        },
-        {
-            path: "/products/:id",
-            name: "product",
-            component: Product
-        },
-        {
-            path: "/cart/",
-            name: "cart",
-            component: Cart
-        }
-    ]
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: Home
+    },
+    {
+      path: "/products/:id",
+      name: "product",
+      component: Product
+    },
+    {
+      path: "/cart/",
+      name: "cart",
+      component: Cart
+    }
+  ]
 });

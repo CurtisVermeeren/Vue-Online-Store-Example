@@ -17,7 +17,9 @@
             <li>Material: {{ product.details.material }}</li>
             <li>Fit: {{ product.details.fit }}</li>
             <li>Maintenance: {{ product.details.maintenance }}</li>
-            <li v-if="product.details.additional">Additional: {{ product.details.additional }}</li>
+            <li v-if="product.details.additional">
+              Additional: {{ product.details.additional }}
+            </li>
           </ul>
         </div>
       </div>
@@ -26,7 +28,7 @@
 </template>
 
 <script>
-import { imagePath } from '@/mixins/imagePath.js'
+import { imagePath } from "@/mixins/imagePath.js";
 
 export default {
   name: "product",
@@ -37,10 +39,9 @@ export default {
   },
   mixins: [imagePath],
   methods: {
-      addToCart() {
-          this.$store.dispatch('addToCart', this.$route.params.id)
-      }, 
-
+    addToCart() {
+      this.$store.dispatch("addToCart", this.$route.params.id);
+    }
   }
 };
 </script>
@@ -54,18 +55,20 @@ export default {
   width: 50%;
 }
 .btn {
-  padding: .5rem .75rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 3px;
   border: none;
   background-color: transparent;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all .15s ease;
-}.btn--grey {
+  transition: all 0.15s ease;
+}
+.btn--grey {
   background-color: #2c3e50;
-  color: #FFF;
-  &:hover, &:focus {
+  color: #fff;
+  &:hover,
+  &:focus {
     background-color: #42b983;
   }
 }

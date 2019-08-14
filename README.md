@@ -1,4 +1,4 @@
-# online-store
+# Vue Online Store Example
 
 ## Project setup
 ```
