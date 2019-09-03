@@ -51,7 +51,7 @@
 
 <script>
 import { imagePath } from "@/mixins/imagePath.js";
-import { all } from "q";
+
 export default {
 	name: "genderOverview",
 	mixins: [imagePath],
