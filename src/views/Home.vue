@@ -4,7 +4,7 @@
       <h2>Featured Items</h2>
       <ul class="featured-items">
         <li
-          v-for="product in products"
+          v-for="product in featuredProducts"
           :key="product.id"
           class="featured-items__item"
         >
@@ -27,8 +27,8 @@ import { imagePath } from "@/mixins/imagePath.js";
 export default {
   name: "home",
   computed: {
-    products() {
-      return this.$store.state.products;
+    featuredProducts: function() {
+        return this.$store.getters.featuredProducts.slice(0,3)
     }
   },
   mixins: [imagePath]

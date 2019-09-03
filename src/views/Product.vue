@@ -2,7 +2,7 @@
   <div>
     <section class="wrapper">
       <div class="flex-col">
-        <img class="flex-col--2" :src="makeImagePath(product)" alt />
+        <img class="flex-col--2 product__image" :src="makeImagePath(product)" alt />
         <div class="flex-col--2">
           <h2>{{ product.name }}</h2>
           <button @click="addToCart" class="btn btn--grey">Add to Cart</button>
@@ -53,6 +53,9 @@ export default {
 }
 .flex-col--2 {
   width: 50%;
+}
+.product__image {
+    padding-right: 3px;
 }
 .btn {
   padding: 0.5rem 0.75rem;
